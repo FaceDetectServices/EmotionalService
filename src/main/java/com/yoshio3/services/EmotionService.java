@@ -55,6 +55,13 @@ public class EmotionService implements Serializable {
         return "";
     }
 
+    @GET
+    @Path("/kill")
+    public void kill() {
+        System.out.println("Bye");
+        System.exit(1);
+    }
+
     private String jobForEmotion(Response emotionRes) {
         EmotionResponseJSONBody[] persons = null;
         if (checkRequestSuccess(emotionRes)) {
